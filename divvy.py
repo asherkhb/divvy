@@ -262,11 +262,11 @@ if __name__ == "__main__":
         print("Please specify your klipReduce path "
               "(usually just 'klipReduce'), a prefix for the run, and a configList or resume options.")
         print("Syntax:")
-        print("-- Launch a new run: python findr_reduce.py <klipReduce path> <run_prefix> <config-and-outputs_list>")
-        print("-- Resume a previous run: python findr_reduce.py resume <klipReduce_path> <run_prefix> <resume_prefix>")
+        print("-- Launch a new run: python divvy.py <programPath> <run_prefix> <config-and-outputs_list>")
+        print("-- Resume a previous run: python divvy.py resume <programPath> <run_prefix> <resume_prefix>")
         print("Examples:")
-        print("-- Launch a new run: python findr_reduce.py klipReduce try1 configList.list")
-        print("-- Resume a previous run: python findr_reduce.py resume klipReduce try2 try1")
+        print("-- Launch a new run: python divvy.py klipReduce try1 configList.list")
+        print("-- Resume a previous run: python divvy.py resume klipReduce try2 try1")
         exit()
     if "resume" in program_args:
         print("Resuming previous from %s_*.log" % program_args[3])

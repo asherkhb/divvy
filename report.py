@@ -1,12 +1,12 @@
 from sys import argv
 prefixes = argv[1:]
 if len(prefixes) < 1:
-    print("##---------------------- Generate Findr Report ----------------------##")
-    print("| Please specify prefixes from which to generate report               |")
-    print("|     i.e. './findr_report.py run1 run2 run3                          |")
-    print("| If logs are in a different file, specify path along with prefixes.  |")
-    print("|     i.e. './findr_report.py results/run1 results/run2 results/run3  |")
-    print("##-------------------------------------------------------------------##")
+    print("##------------------------ Generate Report ------------------------##")
+    print("| Please specify prefixes from which to generate report             |")
+    print("|     i.e. './report.py run1 run2 run3                              |")
+    print("| If logs are in a different file, specify path along with prefixes.|")
+    print("|     i.e. './report.py results/run1 results/run2 results/run3      |")
+    print("##-----------------------------------------------------------------##")
     exit()
 else:
     print("Generating a Findr Report. This can take a few minutes, please be patient...")
@@ -14,7 +14,7 @@ else:
 #### Finish remaining imports ####
 # (waiting until after printing messages above for performance reasons)
 
-from findr_lib import usageBlob, runBlob
+from divvy_lib import usageBlob, runBlob
 
 import pandas as pd
 from datetime import timedelta
@@ -251,7 +251,7 @@ html = '''
 '''
 
 #### Write Findr Report and Create Archive ####
-# TODO: Incriment findr-report directory so multiple can exist without overwrite.
+# TODO: Incriment report directory so multiple can exist without overwrite.
 # TODO: Make sure copy of HTML files works even if executed in a different directory.
 
 if path.exists('findr-report'):
